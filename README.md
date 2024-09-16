@@ -25,7 +25,7 @@ We will use it as a generic type in the Button definition:
 export const ButtonContainer = styled.button<ButtonContainerProps>
 ```
 
-** Note: Right after there are some stylizations in css for example purposes, but this is not so important here. **
+**Note: Right after there are some stylizations in css for example purposes, but this is not so important here.**
 
 Finally, let's analyze what the code for the button component in question looks like:
 
@@ -61,14 +61,14 @@ The component button is ready to be used. As an example, we insert it into the A
   <Button />                      //With the default language set to ./src/languages/main.ts
 ```
 
-** All possibles languages ​​are defined in ./src/languages/main.ts **
+**Note: All possibles languages ​​are defined in ./src/languages/main.ts**
 
 ```
   export type languageFormats = 'pt' | 'en'
 
 ```
 
-And the translation made in the same file in
+**And the translation made in the same file in**
 
 ````
 export const elementHtml = {
