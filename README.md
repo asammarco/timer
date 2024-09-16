@@ -63,7 +63,7 @@ The component button is ready to be used. As an example, we insert it into the A
 
 **Note: All possibles languages ​​are defined in:**
 
- ###./src/languages/main.ts
+ ### ./src/languages/main.ts
 
 ```
   export type languageFormats = 'pt' | 'en'
