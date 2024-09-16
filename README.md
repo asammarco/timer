@@ -61,7 +61,9 @@ The component button is ready to be used. As an example, we insert it into the A
   <Button />                      //With the default language set to ./src/languages/main.ts
 ```
 
-**Note: All possibles languages ​​are defined in ./src/languages/main.ts**
+**Note: All possibles languages ​​are defined in:**
+
+ ###./src/languages/main.ts
 
 ```
   export type languageFormats = 'pt' | 'en'
