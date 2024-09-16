@@ -1,6 +1,6 @@
 # Translator
 
-We are using styled-components package as a entry point for **automatically translate** the lable component.
+The styled-components package was used as a entry point for **automatically translate** the lable of components.
 
 To do this, a file was implemented with the main functions for translation:
 
