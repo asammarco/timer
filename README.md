@@ -47,3 +47,16 @@ export function Button({ language }: ButtonProps) {
   )
 }
 ```
+
+The component button is ready to be used. As an example, we insert it into the App component:
+
+### ./App.tsx
+
+```
+  const language = 'en'
+
+  ...
+
+  <Button language={language} /> //with en definition language
+  <Button /> //With the default language set to ./src/languages/main.ts
+```
