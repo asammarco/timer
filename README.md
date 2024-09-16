@@ -24,3 +24,24 @@ We will use it as a generic type in the Button definition:
 ```
 export const ButtonContainer = styled.button<ButtonContainerProps>
 ```
+
+** Note: Right after there are some stylizations in css for example purposes, but this is not so important here. **
+
+Finally, let's analyze what the code for the button component in question looks like:
+
+```
+import { ButtonContainer } from './Button.styles'
+import { languageFormats, elementHtml, translator } from '../languages/main'
+
+interface ButtonProps {
+  language?: languageFormats
+}
+
+export function Button({ language }: ButtonProps) {
+  return (
+    <ButtonContainer language={language}>
+      {translator(elementHtml.btnEnviar, language)}
+    </ButtonContainer>
+  )
+}
+```
