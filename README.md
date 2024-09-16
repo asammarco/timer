@@ -29,6 +29,8 @@ export const ButtonContainer = styled.button<ButtonContainerProps>
 
 Finally, let's analyze what the code for the button component in question looks like:
 
+### ./src/components/Button.styles.ts
+
 ```
 import { ButtonContainer } from './Button.styles'
 import { languageFormats, elementHtml, translator } from '../languages/main'
