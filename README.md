@@ -57,6 +57,30 @@ The component button is ready to be used. As an example, we insert it into the A
 
   ...
 
-  <Button language={language} /> //with en definition language
-  <Button /> //With the default language set to ./src/languages/main.ts
+  <Button language={language} />  //with 'en' definition language
+  <Button />                      //With the default language set to ./src/languages/main.ts
+```
+
+** All possibles languages ​​are defined in ./src/languages/main.ts **
+
+```
+  export type languageFormats = 'pt' | 'en'
+
+```
+
+And the translation made in the same file in
+
+````
+export const elementHtml = {
+  btnEnviar: [
+    {
+      language: 'pt',
+      label: 'Enviar',
+    },
+    {
+      language: 'en',
+      label: 'Send',
+    },
+  ],
+}
 ```
