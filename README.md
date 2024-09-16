@@ -70,7 +70,7 @@ The component button is ready to be used. As an example, we insert it into the A
 
 ```
 
-**And the translation made in the same file in**
+**And the translation made in the same file in:**
 
 ````
 export const elementHtml = {
