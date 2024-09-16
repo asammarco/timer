@@ -1,5 +1,5 @@
 import { ButtonContainer } from './Button.styles'
-import { languageFormats, elementHtml, translator } from '../languages/Language'
+import { languageFormats, elementHtml, translator } from '../languages/main'
 
 interface ButtonProps {
   language?: languageFormats
