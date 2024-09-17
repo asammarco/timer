@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const HeaderContainer = styled.header`
+interface HeaderContainerProps {
+  language?: string
+}
+
+export const HeaderContainer = styled.header<HeaderContainerProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;

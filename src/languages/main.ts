@@ -25,4 +25,26 @@ export const elementHtml = {
       label: 'Send',
     },
   ],
+
+  // navegador do componente header
+  navLinkTitleHistory: [
+    {
+      language: 'pt',
+      label: 'Histórico',
+    },
+    {
+      language: 'en',
+      label: 'History',
+    },
+  ],
+  navLinkTitleTimer: [
+    {
+      language: 'pt',
+      label: 'Timer',
+    },
+    {
+      language: 'en',
+      label: 'Timer',
+    },
+  ],
 }

@@ -3,10 +3,12 @@ import { Header } from '../../components/Header'
 
 import { LayoutContainer } from './styles'
 
+const defaultLanguage = 'en'
+
 export function DefaultLayout() {
   return (
     <LayoutContainer>
-      <Header />
+      <Header language={defaultLanguage} />
       <Outlet />
     </LayoutContainer>
   )
