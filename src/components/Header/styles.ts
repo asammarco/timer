@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 
-interface HeaderContainerProps {
-  language?: string
-}
-
-export const HeaderContainer = styled.header<HeaderContainerProps>`
+export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,8 +26,13 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
         border-bottom: 3px solid ${(props) => props.theme['gray-500']};
       }
 
+      &:focus {
+        box-shadow: none;
+      }
+
       &.active {
         color: ${(props) => props.theme['green-500']};
+        border-bottom: 3px solid ${(props) => props.theme['gray-500']};
       }
     }
   }

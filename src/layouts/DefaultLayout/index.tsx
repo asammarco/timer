@@ -1,14 +1,34 @@
 import { Outlet } from 'react-router-dom'
 import { Header } from '../../components/Header'
+import { LayoutContainer, SelectLanguage } from './styles'
+import { ChangeEvent, useContext } from 'react'
+import { LanguageContext } from '../../context/Language'
+import { LanguageFormats } from '../../languages'
 
-import { LayoutContainer } from './styles'
-
-const defaultLanguage = 'en'
+interface LanguageEventTarget extends HTMLSelectElement {
+  value: LanguageFormats
+}
 
 export function DefaultLayout() {
+  const { language, changeLanguage } = useContext(LanguageContext)
+
+  function handleOnChangeLanguage(event: ChangeEvent<LanguageEventTarget>) {
+    changeLanguage(event.target.value)
+  }
+
   return (
     <LayoutContainer>
-      <Header language={defaultLanguage} />
+      <SelectLanguage>
+        <select
+          onChange={handleOnChangeLanguage}
+          id="language"
+          defaultValue={language}
+        >
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+        </select>
+      </SelectLanguage>
+      <Header />
       <Outlet />
     </LayoutContainer>
   )

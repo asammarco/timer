@@ -1,28 +1,29 @@
 import { HeaderContainer } from './styles'
-import { languageFormats, elementHtml, translator } from '../../languages/main'
+import { translator } from '../../languages/'
+import { HTMLElement } from './language'
 
 import logoIgnite from '../../assets/Logo.svg'
 import { Scroll, Timer } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { LanguageContext } from '../../context/Language'
 
-interface HeaderProps {
-  language?: languageFormats
-}
+export function Header() {
+  const { language } = useContext(LanguageContext)
 
-export function Header({ language }: HeaderProps) {
   return (
-    <HeaderContainer language={language}>
+    <HeaderContainer>
       <img src={logoIgnite} alt="" />
       <nav>
         <NavLink
           to="/"
-          title={translator(elementHtml.navLinkTitleTimer, language)}
+          title={translator(HTMLElement.navLinkTitleTimer, language)}
         >
           <Timer size={24} />
         </NavLink>
         <NavLink
           to="history"
-          title={translator(elementHtml.navLinkTitleHistory, language)}
+          title={translator(HTMLElement.navLinkTitleHistory, language)}
         >
           <Scroll size={24} />
         </NavLink>
